@@ -29,16 +29,16 @@ import java.util.List;
 import java.util.Map;
 
 public class AllTests  extends BaseTest {
-	
+
 	@DataProvider (name = "data-provider-props")
 	public String[][] dpMethodProps(){
 		return new String[][]{{ProjectConfig.getPropertyValue("DisplayName"),
 			ProjectConfig.getPropertyValue("EmailAddress"),
 			ProjectConfig.getPropertyValue("Password")}};
 	}
-	
-	
-	
+
+
+
 	@Test(groups = { "P1" }, description = "Equity sorting")
 	public void MarketOverview() throws InterruptedException, Exception {
 		TestCaseClass.equityPriceSorting(driver);
@@ -50,12 +50,19 @@ public class AllTests  extends BaseTest {
 		TestCaseClass.registrationValidation(driver,displayName,email,password);
 	}
 
-	
+
+	@Test
+	public void RegistrationModule_Inject_UserObject() throws InterruptedException, IOException 
+	{
+		TestConfiguration config = new TestConfiguration();
+		Injector injector = Guice.createInjector(config);
+		TestImpl test = injector.getInstance(TestImpl.class);
+		TestCaseClass.registrationValidation(driver,test.name,test.email,test.pwd);
+	}
 
 
- 
-   
-	
 
-	
+
+
+
 }

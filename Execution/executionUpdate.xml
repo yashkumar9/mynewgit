@@ -1,26 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="WEB_APP" verbose="2">
-  <test name="Command line test a6a48904-a12a-4f78-b70e-dc01f3a434d9">
+  <test name="Command line test c0a4f5eb-df70-49c0-98e4-e0f0327afa25">
     <parameter name="dataSheet" value="WEB_APP_TD"/>
-    <parameter name="testCaseID" value="TC001"/>
+    <parameter name="testCaseID" value="TC003"/>
     <classes>
       <class name="com.webapp.tests.AllTests">
         <methods>
-          <include name="RegistrationModule_DP_props"/>
+          <include name="RegistrationModule_Inject_UserObject"/>
         </methods>
       </class> <!-- com.webapp.tests.AllTests -->
     </classes>
-  </test> <!-- Command line test a6a48904-a12a-4f78-b70e-dc01f3a434d9 -->
-  <test name="Command line test 19e00b6b-dbc8-4d00-b3b2-b7f6f6dbcebc">
-    <parameter name="dataSheet" value="WEB_APP_TD"/>
-    <parameter name="testCaseID" value="TC002"/>
-    <classes>
-      <class name="com.webapp.tests.AllTests">
-        <methods>
-          <include name="MarketOverview"/>
-        </methods>
-      </class> <!-- com.webapp.tests.AllTests -->
-    </classes>
-  </test> <!-- Command line test 19e00b6b-dbc8-4d00-b3b2-b7f6f6dbcebc -->
+  </test> <!-- Command line test c0a4f5eb-df70-49c0-98e4-e0f0327afa25 -->
 </suite> <!-- WEB_APP -->

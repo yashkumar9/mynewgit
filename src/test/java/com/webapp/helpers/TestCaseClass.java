@@ -33,7 +33,7 @@ public class TestCaseClass {
 		Assert.assertTrue(RegistrationPage.loginValidation(Name,email,pass));
 	
 	}
-	
+
 	
 	
 

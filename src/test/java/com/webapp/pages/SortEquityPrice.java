@@ -60,7 +60,7 @@ public class SortEquityPrice
 			for(int k=0;k<doub.size();k++) {
 				   String str1= new DecimalFormat("#0.000#").format(doub.get(k));
 				  
-				   if(str1.charAt(0)!='-'){
+				   if(str1.charAt(0)!='-' && !str1.equals("0.000")){
 					   str1="+"+str1;
 					  
 				   sorted.add(str1);
